@@ -127,7 +127,7 @@ int main()
             inputnodes[i].output = trainingdata[traind][i];
             for(int j = 0; j < hiddennum; ++j)
             {
-                hiddennodes[j].input[i+1] = trainingdata[traind][i]*weights[i+1][j+1][0];;
+                hiddennodes[j].input[i+1] = trainingdata[traind][i]*weights[i+1][j+1][0];
             }
         }
         out.input = 0;
