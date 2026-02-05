@@ -27,7 +27,8 @@ int main()
         }
     }
     std::ofstream file;
-    file.open("Training_data.txt");
+    file.open("Training_data.h");
+    file << "#pragma once\n#define INPUT_DATA_LIST ";
     for(int i = 0; i < pow(data_per_dim,(int)dim); ++i)
     {
         file << "{";
@@ -40,6 +41,7 @@ int main()
         if (i < pow(data_per_dim,(int)dim) - 1) file << ",";
     }
     file << std::endl;
+    file << "#define OUTPUT_DATA_LIST ";
     file << "{";
     for(int i = 0; i < pow(data_per_dim,(int)dim); ++i)
     {
